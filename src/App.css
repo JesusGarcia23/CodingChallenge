@@ -1,38 +1,143 @@
 .App {
   text-align: center;
+  font-family: 'Museo Sans 500';
+  letter-spacing: 4px;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  background-color: #014652;
+  color: rgb(218, 250, 226);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {font-family: "Museo Sans 500"; 
+  src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot"); 
+  src: url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/16697a764b01cdcc691b05f001046bc3.svg#Museo Sans 500") format("svg"); }
+
+/* FONT FAMILY TO PLACEHOLDERS */
+::-webkit-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #014652;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:-ms-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #014652;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+:-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #014652;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
+}
+
+::-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #014652;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
+}
+
+/*  */
+input[type=text]{
+  background-color: rgb(218, 250, 226);
+  color: #014652;
+  border: 0px;
+  font-family: 'Museo Sans 500';
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 1vw;
+}
+
+input[type=email]{
+  background-color: rgb(218, 250, 226);
+  color: #014652;
+  border: 0px;
+  font-family: 'Museo Sans 500';
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 1vw;
+}
+
+input[type=number]{
+  background-color: rgb(218, 250, 226);
+  color: #014652;
+  border: 0px;
+  text-align: center;
+  font-family: 'Museo Sans 500';
+  letter-spacing: 4px;
+  font-size: 1vw;
+}
+
+.the-form{
+  padding: 25px;
+  margin: 50px;
+  width: 40vw;
+  background-color: #33698d;
+}
+
+.the-form button {
+  margin-top: 30px;
+  border: 1px solid rgb(228, 72, 72);
+  background-color: rgb(228, 72, 72);
+  font-family: 'Museo Sans 500';
+  letter-spacing: 4px;
+  font-size: 1vw;
+  color: white;
+  padding: 20px 39%;
+}
+
+.user-info{
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.user-info input{
+  margin: 2.3vh auto;
+  width: 34vw;
+  padding: 20px;
+}
+
+.skills-form{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 99.9%;
 }
 
-.App-link {
-  color: #61dafb;
+.form-skill{
+  margin: 2.3vh auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 36.5vw;
+  height: 5.6vh;
+  
+}
+.form-skill label{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 30vw;
+  height: 4vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-skill input{
+  width: 4vw;
+  height: 5vh;
 }
