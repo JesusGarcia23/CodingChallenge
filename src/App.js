@@ -25,19 +25,63 @@ class App extends React.Component {
       selfMotivation: 0,
       communicationSkills: 0,
       ownEnergyLvl: 0,
-      intAptitude: 0
+      intAptitude: 0,
+      maxPoint: 51,
+      totalPoint: 0,
     }
   }
 
-  handleSubmit = () => {
-
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state.totalPoint)
   }
 
   updateInput = (e) => {
     e.preventDefault();
-    this.setState({
-      [e.currentTarget.name]: e.currentTarget.value
-    })
+    const {name, value, type} = e.target;
+    let theValue = Number(value)
+
+    if(type !== 'number'){
+      this.setState({
+        [name]: value
+      })
+    }else{
+      
+      const theInfo = this.state
+      console.log(theInfo[name])
+      console.log(theValue)
+
+      console.log(this.state.totalPoint)
+
+      if(this.state.totalPoint < this.state.maxPoint){
+        console.log("ITS LESS")
+        console.log(this.state.totalPoint)
+        theInfo[name] = theValue
+        
+      }else{
+        console.log("IT NOT LESS")
+      }
+
+    
+      let theTotal = 0
+     
+
+      for(let x in this.state){
+        if(typeof this.state[x] === 'number' && x !== 'maxPoint' && x !== 'totalPoint'){
+          theTotal += theInfo[x]
+        }
+       
+      }
+
+      if(theTotal < this.state.maxPoint){
+        this.setState({
+          [name]: theValue,
+          totalPoint: theTotal 
+          })
+      }
+
+
+    }
 
   }
 
