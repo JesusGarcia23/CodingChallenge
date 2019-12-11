@@ -95,7 +95,7 @@ input[type=number]{
 }
 
 .the-form{
-  padding: 25px;
+  padding: 45px 20px;
   margin: 50px;
   width: 40vw;
   background-color: #33698d;
@@ -160,6 +160,7 @@ input[type=number]{
 
   .the-form{
     width: 90vw;
+    padding: 20px 10px;
   }
 
   .user-info input{
@@ -212,7 +213,7 @@ input[type=number]{
   font-size: 2vh;
 }
 .the-form button{
-  padding: 10px 35%;
+  padding: 10px 33%;
 font-size: 3vh;
 }
 }
