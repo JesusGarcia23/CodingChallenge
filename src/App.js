@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './Components/Form';
-import Axios from 'axios';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props){
@@ -34,7 +34,7 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    Axios.post('http://localhost:5000/submitForm', this.state)
+    axios.post(process.env.HEROKU, this.state)
     .then(responseFromBackEnd => {
       if(responseFromBackEnd.status === 200){
         this.setState({
