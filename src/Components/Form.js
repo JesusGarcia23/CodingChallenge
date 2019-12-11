@@ -7,7 +7,6 @@ const Form = (props) => {
     return(
         <form className='the-form' onSubmit={e => props.handleSubmit(e)}>
         <div className='user-info'>
-        <div>{totalPoint}</div>
         <input type='text' name='fullName' value={fullName} onChange={e => props.updateInput(e)} placeholder='FULL NAME'></input>
         <input type='email' name='email' value={email} onChange={e => props.updateInput(e)} placeholder='EMAIL'></input>
         <input type='text' name='projectRepo' value={projectRepo} onChange={e => props.updateInput(e)} placeholder='PROJECT REPO'></input>

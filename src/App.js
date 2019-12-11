@@ -33,7 +33,7 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state.totalPoint)
+    console.log(this.state)
   }
 
   updateInput = (e) => {
@@ -48,23 +48,18 @@ class App extends React.Component {
     }else{
       
       const theInfo = this.state
-      console.log(theInfo[name])
-      console.log(theValue)
 
-      console.log(this.state.totalPoint)
-
-      if(this.state.totalPoint < this.state.maxPoint){
-        console.log("ITS LESS")
-        console.log(this.state.totalPoint)
-        theInfo[name] = theValue
-        
-      }else{
-        console.log("IT NOT LESS")
+      if(this.state.totalPoint === 50){
+        if(theValue > theInfo[name]){
+          theValue -= 1
+        }
       }
 
+      if(this.state.totalPoint < this.state.maxPoint){
+        theInfo[name] = theValue 
+      }
     
       let theTotal = 0
-     
 
       for(let x in this.state){
         if(typeof this.state[x] === 'number' && x !== 'maxPoint' && x !== 'totalPoint'){
@@ -84,7 +79,6 @@ class App extends React.Component {
     }
 
   }
-
 
   render(){
   return (
