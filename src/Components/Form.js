@@ -7,10 +7,10 @@ const Form = (props) => {
     return(
         <form className='the-form' onSubmit={e => props.handleSubmit(e)}>
         <div className='user-info'>
-        <input type='text' name='fullName' value={fullName} onChange={e => props.updateInput(e)} placeholder='FULL NAME'></input>
-        <input type='email' name='email' value={email} onChange={e => props.updateInput(e)} placeholder='EMAIL'></input>
-        <input type='text' name='projectRepo' value={projectRepo} onChange={e => props.updateInput(e)} placeholder='PROJECT REPO'></input>
-        <input type='text' name='projectUrl' value={projectUrl} onChange={e => props.updateInput(e)} placeholder='PROJECT URL'></input>
+        <input type='text' name='fullName' required value={fullName} onChange={e => props.updateInput(e)} placeholder='FULL NAME'></input>
+        <input type='email' name='email' required value={email} onChange={e => props.updateInput(e)} placeholder='EMAIL'></input>
+        <input type='text' name='projectRepo' required value={projectRepo} onChange={e => props.updateInput(e)} placeholder='PROJECT REPO'></input>
+        <input type='text' name='projectUrl' required value={projectUrl} onChange={e => props.updateInput(e)} placeholder='PROJECT URL'></input>
         </div>
 
         <div className='skills-form'>
