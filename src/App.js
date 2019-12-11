@@ -34,7 +34,7 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    axios.post(`${process.env.REACT_APP_LOCALHOST}/submitForm`, this.state)
+    axios.post(`${process.env.REACT_APP_HEROKU}/submitForm`, this.state)
     .then(responseFromBackEnd => {
       console.log(responseFromBackEnd)
       if(responseFromBackEnd.status === 200 && !responseFromBackEnd.data.errors){
