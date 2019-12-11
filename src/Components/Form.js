@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = (props) => {
     const {fullName, email, projectRepo, projectUrl, bestpracticeOOP, modularDevelopment, fulWorkUnderstanding, testing, databaseKnowledge, debugging,
-        probSolvingSkills, javascript, html, css, workingTeam, selfMotivation, communicationSkills, ownEnergyLvl, intAptitude, totalPoint, updateInput, handleSubmit} = props.allInfo
+        probSolvingSkills, javascript, html, css, workingTeam, selfMotivation, communicationSkills, ownEnergyLvl, intAptitude} = props.allInfo
 
     return(
         <form className='the-form' onSubmit={e => props.handleSubmit(e)}>
