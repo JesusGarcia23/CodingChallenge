@@ -1,11 +1,11 @@
 .App {
   text-align: center;
   font-family: 'Museo Sans 500';
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   font-size: 1vw;
   display: flex;
   justify-content: center;
-  background-color: #014652;
+  background-color: #035664;
   color: rgb(218, 250, 226);
 }
 
@@ -20,7 +20,7 @@
 /* FONT FAMILY TO PLACEHOLDERS */
 ::-webkit-input-placeholder {
   font-family: 'Museo Sans 500';
-  color: #014652;
+  color: #1c7b8b;
   letter-spacing: 4px;
   font-size: 1vw;
   padding-left: 0.1vw;
@@ -28,7 +28,7 @@
 
 :-ms-input-placeholder {
   font-family: 'Museo Sans 500';
-  color: #014652;
+  color: #1c7b8b;
   letter-spacing: 4px;
   font-size: 1vw;
   padding-left: 0.1vw;
@@ -36,7 +36,7 @@
 
 :-moz-placeholder {
   font-family: 'Museo Sans 500';
-  color: #014652;
+  color: #1c7b8b;
   letter-spacing: 4px;
   font-size: 1vw;
   padding-left: 0.1vw;
@@ -44,40 +44,53 @@
 
 ::-moz-placeholder {
   font-family: 'Museo Sans 500';
-  color: #014652;
+  color: #1c7b8b;
   letter-spacing: 4px;
   font-size: 1vw;
   padding-left: 0.1vw;
 }
 
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px rgb(218, 250, 226) inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #1c7b8b !important;
+}
+
 /*  */
 input[type=text]{
   background-color: rgb(218, 250, 226);
-  color: #014652;
+  color: #1c7b8b;
   border: 0px;
   font-family: 'Museo Sans 500';
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   font-size: 1vw;
   padding-left: 1vw;
 }
 
 input[type=email]{
   background-color: rgb(218, 250, 226);
-  color: #014652;
+  color: #1c7b8b;
   border: 0px;
   font-family: 'Museo Sans 500';
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   font-size: 1vw;
   padding-left: 1vw;
 }
 
 input[type=number]{
   background-color: rgb(218, 250, 226);
-  color: #014652;
+  color: #1c7b8b;
   border: 0px;
   text-align: center;
   font-family: 'Museo Sans 500';
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   font-size: 1vw;
 }
 
@@ -141,4 +154,65 @@ input[type=number]{
 .form-skill input{
   width: 4vw;
   height: 5vh;
+}
+
+@media screen and (max-width: 800px){
+
+  .the-form{
+    width: 90vw;
+  }
+
+  .user-info input{
+    width: 60vw;
+  }
+
+  /* FONT FAMILY TO PLACEHOLDERS */
+::-webkit-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #1c7b8b;
+  letter-spacing: 4px;
+  font-size: 2vw;
+  padding-left: 0.1vw;
+}
+
+:-ms-input-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #1c7b8b;
+  letter-spacing: 4px;
+  font-size: 1vw;
+}
+
+:-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #1c7b8b;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
+}
+
+::-moz-placeholder {
+  font-family: 'Museo Sans 500';
+  color: #1c7b8b;
+  letter-spacing: 4px;
+  font-size: 1vw;
+  padding-left: 0.1vw;
+}
+
+.form-skill{
+  width: 68vw;
+}
+
+.form-skill label {
+  font-size: 10px;
+  width: 80%;
+}
+
+.form-skill input{
+  width: 15%;
+  font-size: 2vh;
+}
+.the-form button{
+  padding: 10px 35%;
+font-size: 3vh;
+}
 }
